@@ -20,9 +20,9 @@ function a_rosebud_rejoicing_setup() {
 	 * Make theme available for translation.
 	 * Translations can be filed in the /languages/ directory.
 	 * If you're building a theme based on A Rosebud Rejoicing, use a find and replace
-	 * to change 'a-rosebud-rejoicing' to the name of your theme in all the template files.
+	 * to change 'a_rosebud_rejoicing' to the name of your theme in all the template files.
 	 */
-	load_theme_textdomain( 'a-rosebud-rejoicing', get_template_directory() . '/languages' );
+	load_theme_textdomain( 'a_rosebud_rejoicing', get_template_directory() . '/languages' );
 
 	// Add default posts and comments RSS feed links to head.
 	add_theme_support( 'automatic-feed-links' );
@@ -44,7 +44,7 @@ function a_rosebud_rejoicing_setup() {
 
 	// This theme uses wp_nav_menu() in one location.
 	register_nav_menus( array(
-		'primary' => esc_html__( 'Primary', 'a-rosebud-rejoicing' ),
+		'primary' => esc_html__( 'Primary', 'a_rosebud_rejoicing' ),
 	) );
 
 	/*
@@ -100,9 +100,9 @@ add_action( 'after_setup_theme', 'a_rosebud_rejoicing_content_width', 0 );
  */
 function a_rosebud_rejoicing_widgets_init() {
 	register_sidebar( array(
-		'name'          => esc_html__( 'Sidebar', 'a-rosebud-rejoicing' ),
+		'name'          => esc_html__( 'Sidebar', 'a_rosebud_rejoicing' ),
 		'id'            => 'sidebar-1',
-		'description'   => esc_html__( 'Add widgets here.', 'a-rosebud-rejoicing' ),
+		'description'   => esc_html__( 'Add widgets here.', 'a_rosebud_rejoicing' ),
 		'before_widget' => '<section id="%1$s" class="widget %2$s">',
 		'after_widget'  => '</section>',
 		'before_title'  => '<h2 class="widget-title">',
@@ -115,11 +115,11 @@ add_action( 'widgets_init', 'a_rosebud_rejoicing_widgets_init' );
  * Enqueue scripts and styles.
  */
 function a_rosebud_rejoicing_scripts() {
-	wp_enqueue_style( 'a-rosebud-rejoicing-style', get_stylesheet_uri() );
+	wp_enqueue_style( 'a_rosebud_rejoicing-style', get_stylesheet_uri() );
 
-	wp_enqueue_script( 'a-rosebud-rejoicing-navigation', get_template_directory_uri() . '/js/navigation.js', array(), '20151215', true );
+	wp_enqueue_script( 'a_rosebud_rejoicing-navigation', get_template_directory_uri() . '/js/navigation.js', array(), '20151215', true );
 
-	wp_enqueue_script( 'a-rosebud-rejoicing-skip-link-focus-fix', get_template_directory_uri() . '/js/skip-link-focus-fix.js', array(), '20151215', true );
+	wp_enqueue_script( 'a_rosebud_rejoicing-skip-link-focus-fix', get_template_directory_uri() . '/js/skip-link-focus-fix.js', array(), '20151215', true );
 
 	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
 		wp_enqueue_script( 'comment-reply' );

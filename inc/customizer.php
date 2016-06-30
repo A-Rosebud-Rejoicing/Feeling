@@ -59,7 +59,7 @@ function a_rosebud_rejoicing_customize_register( $wp_customize ) {
 
 	/* Add section: example for reference.
 	$wp_customize->add_section( 'footer' , array(
-	  'title' => __( 'Footer', 'a-rosebud-rejoicing' ),
+	  'title' => __( 'Footer', 'a_rosebud_rejoicing' ),
 	  'priority' => 90, // Before Navigation.
 		'capability' => 'edit_theme_options', //Capability needed to tweak
 	) );
@@ -75,8 +75,8 @@ function a_rosebud_rejoicing_customize_register( $wp_customize ) {
 
  //Header Image Direction
  $wp_customize->add_control( 'HI_Direction', array(
- 	'label' 		=> __( 'Image URL', 'a-rosebud-rejoicing' ),
-	'description' => __( 'Enter the website URL', 'a-rosebud-rejoicing' ),
+ 	'label' 		=> __( 'Image URL', 'a_rosebud_rejoicing' ),
+	'description' => __( 'Enter the website URL', 'a_rosebud_rejoicing' ),
 	'type'     	=> 'textarea',
  	'section'	 	=> 'header_image',
  	'priority' 	=> 74,
@@ -92,8 +92,8 @@ function a_rosebud_rejoicing_customize_register( $wp_customize ) {
 
  //Header Image Hover Text
  $wp_customize->add_control( 'HI_hover_text', array(
-	 'label'    => __( 'Hover Text', 'a-rosebud-rejoicing' ),
-	 'description' => __( 'Select the text to appear on hover.', 'a-rosebud-rejoicing' ),
+	 'label'    => __( 'Hover Text', 'a_rosebud_rejoicing' ),
+	 'description' => __( 'Select the text to appear on hover.', 'a_rosebud_rejoicing' ),
 	 'type'     => 'textarea',
 	 'section'  => 'header_image',
 	 'priority' => 75,
@@ -108,8 +108,8 @@ function a_rosebud_rejoicing_customize_register( $wp_customize ) {
 
  	 /* Header Image Hover Image, sans the cropping
   $wp_customize->add_control( new WP_Customize_Media_Control( $wp_customize, 'HI_hover_image', array(
- 	 'label' => __( 'Hover Image', 'a-rosebud-rejoicing' ),
-	 'description' => __( 'Select the image to appear on hover.', 'a-rosebud-rejoicing' ),
+ 	 'label' => __( 'Hover Image', 'a_rosebud_rejoicing' ),
+	 'description' => __( 'Select the image to appear on hover.', 'a_rosebud_rejoicing' ),
  	 'section' => 'header_image',
 	 'mime_type' => 'image',
  	 'priority' => 76,
@@ -117,8 +117,8 @@ function a_rosebud_rejoicing_customize_register( $wp_customize ) {
 	 */
 	 $wp_customize->add_control( new WP_Customize_Cropped_Image_Control( $wp_customize, 'HI_hover_image', array(
     'section'     => 'header_image',
-		'description' => __( 'Select the image to appear on hover.', 'a-rosebud-rejoicing' ),
-    'label'       => __(  'Hover Image', 'a-rosebud-rejoicing' ),
+		'description' => __( 'Select the image to appear on hover.', 'a_rosebud_rejoicing' ),
+    'label'       => __(  'Hover Image', 'a_rosebud_rejoicing' ),
     'flex_width'  => true, // Allow any width, making the specified value recommended. False by default.
     'flex_height' => true, // Require the resulting image to be exactly as tall as the height attribute (default).
     'width'       => 170,
@@ -135,7 +135,7 @@ function a_rosebud_rejoicing_customize_register( $wp_customize ) {
 
 	// header background color picker
 	$wp_customize->add_control( new WP_Customize_Color_Control( $wp_customize, 'header_background_color', array(
-		'label' => __( 'Hair Color', 'a-rosebud-rejoicing' ),
+		'label' => __( 'Hair Color', 'a_rosebud_rejoicing' ),
 		'section' => 'colors',
 		'priority' => 1,
 		) ) );
@@ -151,7 +151,7 @@ function a_rosebud_rejoicing_customize_register( $wp_customize ) {
 			) );
 
 		$wp_customize->add_control( 'header_shadow3', array(
-  		'label' => __( 'Shadow', 'a-rosebud-rejoicing' ),
+  		'label' => __( 'Shadow', 'a_rosebud_rejoicing' ),
   		'type' => 'checkbox',
   		'section' => 'title_tagline',
 		) );
@@ -222,7 +222,7 @@ function a_rosebud_rejoicing_custom_css_output() {
 			text-shadow: {$textShadow};
     }";
 
-  wp_add_inline_style( 'a-rosebud-rejoicing-style', $custom_css );
+  wp_add_inline_style( 'a_rosebud_rejoicing-style', $custom_css );
 
 }
 //add_action( 'wp_head', 'a_rosebud_rejoicing_custom_css_output' );

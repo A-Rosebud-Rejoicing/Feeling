@@ -19,7 +19,7 @@
 			the_content();
 
 			wp_link_pages( array(
-				'before' => '<div class="page-links">' . esc_html__( 'Pages:', 'a-rosebud-rejoicing' ),
+				'before' => '<div class="page-links">' . esc_html__( 'Pages:', 'a_rosebud_rejoicing' ),
 				'after'  => '</div>',
 			) );
 		?>
@@ -30,7 +30,7 @@
 			edit_post_link(
 				sprintf(
 					/* translators: %s: Name of current post */
-					esc_html__( 'Edit %s', 'a-rosebud-rejoicing' ),
+					esc_html__( 'Edit %s', 'a_rosebud_rejoicing' ),
 					the_title( '<span class="screen-reader-text">"', '"</span>', false )
 				),
 				'<span class="edit-link">',
